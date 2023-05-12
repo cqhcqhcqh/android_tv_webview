@@ -7,11 +7,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_splash" />
     </item>
-    <TextView
-        android:text="@string/advices"
-        android:textColor="#999999"
-        android:textStyle="bold"
-        android:textSize="12sp" />
 </layer-list>
