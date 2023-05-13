@@ -2,7 +2,7 @@
     package="com.example.android_tv_webview">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="华驿酒店集团"
+        android:label="华驿酒店房价牌"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
