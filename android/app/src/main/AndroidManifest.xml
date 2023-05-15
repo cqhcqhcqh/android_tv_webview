@@ -11,7 +11,8 @@
         android:icon="@mipmap/ic_launcher">
         <!-- https://forwardforce.io/android-tv-with-flutter-automatically-launch-on-boot/ -->
         <!-- 给指定 BootReceiver 权限，然后监听 BOOT_COMPLETED 事件打开指定 MainActivity `context.startActivity()`-->
-        <!-- 安卓手机系统上->设置->隐私->权限管理->应用->允许所有权限 -->
+        <!-- 应用启动管理中也要给自动管理给关闭 -->
+        <!-- 安卓手机系统上->设置->隐私->权限管理->应用->允许所有权限，一般有两个权限-->
         <receiver
            android:enabled="true"
            android:exported="true"
