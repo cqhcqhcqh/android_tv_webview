@@ -1,10 +1,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android_tv_webview">
+    package="com.example.android_tv_webview" android:installLocation="internalOnly">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- https://forwardforce.io/android-tv-with-flutter-automatically-launch-on-boot/ -->
+    <!-- 授予应用权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
    <application
         android:label="华驿酒店房价牌"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <!-- https://forwardforce.io/android-tv-with-flutter-automatically-launch-on-boot/ -->
+        <!-- 给指定 BootReceiver 权限，然后监听 BOOT_COMPLETED 事件打开指定 MainActivity `context.startActivity()`-->
+        <!-- 安卓手机系统上->设置->隐私->权限管理->应用->允许所有权限 -->
+        <receiver
+           android:enabled="true"
+           android:exported="true"
+           android:name=".BootReceiver"
+           android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+           <intent-filter>
+               <action android:name="android.intent.action.BOOT_COMPLETED" />
+               <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+       </receiver>
         <activity
             android:name=".MainActivity"
             android:exported="true"
