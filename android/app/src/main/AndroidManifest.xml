@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
    <application
-        android:label="华驿酒店房价牌"
+        android:label="辉玥科技项目版图"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <!-- https://forwardforce.io/android-tv-with-flutter-automatically-launch-on-boot/ -->
