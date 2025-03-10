@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android_tv_webview" android:installLocation="internalOnly">
+     android:installLocation="internalOnly">
     <uses-permission android:name="android.permission.INTERNET"/>
     <!-- https://forwardforce.io/android-tv-with-flutter-automatically-launch-on-boot/ -->
     <!-- 授予应用权限 -->
