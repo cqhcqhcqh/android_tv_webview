@@ -56,8 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     controller = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadFlutterAsset('65H69KDisplay/index.html');
+    ..loadRequest(
+        Uri.parse('https://dzfjp.bthhotels.com'),
+      );
   }
 
   @override
