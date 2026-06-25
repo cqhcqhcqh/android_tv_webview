@@ -2,8 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter_android/webview_flutter_android.dart';
 
 class WebViewStack extends StatefulWidget {
   const WebViewStack({required this.controller, super.key});
@@ -20,6 +22,11 @@ class _WebViewStackState extends State<WebViewStack> {
   @override
   void initState() {
     super.initState();
+    // Configure Android-specific WebView settings to prevent content stretching
+    final platformController = widget.controller.platform;
+    if (Platform.isAndroid && platformController is AndroidWebViewController) {
+      platformController.setUseWideViewPort(true);
+    }
     widget.controller
       ..setNavigationDelegate(
         NavigationDelegate(
