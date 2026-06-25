@@ -1,4 +1,4 @@
-package com.example.android_tv_webview
+package com.example.android_tv_webview_wanxin
 
 import android.content.BroadcastReceiver
 import android.content.Context
